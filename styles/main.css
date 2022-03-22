@@ -12,6 +12,7 @@
 html {
 background-color: lightsteelblue;
 background-image: url("../images/bgtile.jpg");
+background-attachment: fixed;
 
 }
 body {
@@ -49,6 +50,10 @@ header h2 {
     color: steelblue;
     text-shadow: 5px 5px 12px steelblue;
     padding: 10px 0;
+}
+
+header a {
+    text-decoration: none;
 }
 
 #logoimage {
@@ -183,6 +188,7 @@ header h2 {
     position: absolute;
     top: 100%;
     background-color: steelblue;
+    box-shadow: 7px 7px 15px -1px gray;
 }
 
 .container ul li {
@@ -263,6 +269,36 @@ section {
     padding-left: 5px;
 }
 
+article {
+    display: flex;
+    flex-direction: column;
+}
+
+article > img {
+    margin: 1em 2em;
+    border-radius: 5px;
+    box-shadow: 2px 2px 3px 3px darkslategray;
+}
+.icon {
+    float: left;
+    max-width: 25px;
+    margin-right: .5em;
+}
+
+section h3::after {
+    clear: left;
+}
+
+section p {
+    margin: 0 2em 1.5em;
+}
+section h3 {
+    margin-bottom: 5px;
+}
+.underconstruction {
+    display: block;
+    margin: auto;
+}
 blockquote {
     width: 80%;
     font-family: 'Times New Roman', Times, serif;
@@ -329,9 +365,13 @@ footer p {
 
 /* Media Queries */
 @media only screen and (max-width: 900px) {
+    html {
+        background-image: none;
+    }
     body {
       box-shadow: none;
       font-size: 90%;
+      border: none;
     }
     #leftaside {
         display: none;
